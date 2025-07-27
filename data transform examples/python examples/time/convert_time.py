@@ -34,3 +34,13 @@ def convert_datetime_to_str_ISO_8601_with_Z(dt):
     # Format the datetime object to the desired string format
     utc_string = dt.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
     return utc_string
+
+
+
+# Example data – a list of time durations in seconds
+test_seconds = [45, 90, 3600, 3665, 86399, 86400, 90000]
+
+# Print the output in "HH:MM:SS" format
+for sec in test_seconds:
+    hms = convert_seconds_to_hms(sec)
+    print(f"{sec} seconds → {hms}")
